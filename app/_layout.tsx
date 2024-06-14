@@ -1,9 +1,14 @@
-import TabBar from "@/components/TabBar"
+import CustomBottomTab from "@/components/BottomTabs"
 import { Tabs } from "expo-router"
+import { StatusBar } from "expo-status-bar"
+import {
+  SafeAreaFrameContext,
+  SafeAreaProvider,
+} from "react-native-safe-area-context"
 
 export default function _layout() {
   return (
-    <Tabs tabBar={(props) => <TabBar {...props} />}>
+    <Tabs tabBar={(props) => <CustomBottomTab {...props} />}>
       <Tabs.Screen
         name="index"
         options={{
